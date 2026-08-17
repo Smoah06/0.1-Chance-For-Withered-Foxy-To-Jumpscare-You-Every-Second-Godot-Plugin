@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://bbq0c6riomaf3"]
+
+[ext_resource type="Script" uid="uid://3d2hx48n4fl4" path="res://addons/foxy/interface.gd" id="1_akcne"]
+[ext_resource type="Texture2D" uid="uid://ctd7xjk45t5n6" path="res://addons/foxy/assets/jumpscare_animation/fox1.png" id="2_ufd7t"]
+[ext_resource type="Texture2D" uid="uid://dccwt4a4b7277" path="res://addons/foxy/assets/jumpscare_animation/fox2.png" id="3_t2br0"]
+[ext_resource type="Texture2D" uid="uid://c4ip4blavrn8g" path="res://addons/foxy/assets/jumpscare_animation/fox3.png" id="4_smu4h"]
+[ext_resource type="Texture2D" uid="uid://bebxe7304nju0" path="res://addons/foxy/assets/jumpscare_animation/fox4.png" id="5_lv2vg"]
+[ext_resource type="Texture2D" uid="uid://cxlgpxwn6d7g2" path="res://addons/foxy/assets/jumpscare_animation/fox5.png" id="6_t3w30"]
+[ext_resource type="Texture2D" uid="uid://ycokjmypkmk7" path="res://addons/foxy/assets/jumpscare_animation/fox6.png" id="7_au4iv"]
+[ext_resource type="Texture2D" uid="uid://kry8xjb2rjox" path="res://addons/foxy/assets/jumpscare_animation/fox7.png" id="8_qbr6n"]
+[ext_resource type="Texture2D" uid="uid://cbkqkbocbpwr4" path="res://addons/foxy/assets/jumpscare_animation/fox8.png" id="9_hu6mj"]
+[ext_resource type="Texture2D" uid="uid://cbq7pgb0wbllf" path="res://addons/foxy/assets/jumpscare_animation/fox9.png" id="10_2ehoj"]
+[ext_resource type="Texture2D" uid="uid://de0dufq2obodx" path="res://addons/foxy/assets/jumpscare_animation/fox10.png" id="11_qsjx3"]
+[ext_resource type="Texture2D" uid="uid://dqnnylqxvrskp" path="res://addons/foxy/assets/jumpscare_animation/fox11.png" id="12_7lclh"]
+[ext_resource type="Texture2D" uid="uid://xbrh8ijwmhhj" path="res://addons/foxy/assets/jumpscare_animation/fox12.png" id="13_wo145"]
+[ext_resource type="AudioStream" uid="uid://dda6l2ccbm85w" path="res://addons/foxy/assets/scream.mp3" id="14_ufd7t"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5fh56"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ufd7t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_t2br0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_smu4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lv2vg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_t3w30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_au4iv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qbr6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hu6mj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_2ehoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qsjx3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7lclh")
+}, {
+"duration": 4.0,
+"texture": ExtResource("13_wo145")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 24.0
+}]
+
+[node name="Interface" type="Control" unique_id=54294649]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+script = ExtResource("1_akcne")
+
+[node name="Foxy" type="AnimatedSprite2D" parent="." unique_id=1310463118]
+sprite_frames = SubResource("SpriteFrames_5fh56")
+frame = 11
+frame_progress = 1.0
+
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=1223234837]
+stream = ExtResource("14_ufd7t")
